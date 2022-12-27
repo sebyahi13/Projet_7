@@ -131,6 +131,22 @@ infos_client = infos_client.append({
 
 
 
+flag_own_realty={0:'NON',1:'OUI'     }
+infos_client = infos_client.append({
+    'INFORMATION' : 'Possession (Villa/App)' ,
+    'VALEUR' :    flag_own_realty[   X_client1.loc[0, 'FLAG_OWN_REALTY']    ]  ,  
+     
+    },ignore_index=True )
+
+
+
+
+infos_client = infos_client.append({
+    'INFORMATION' : 'Nombre (Enfants)' ,
+    'VALEUR' :       X_client1.loc[0, 'CNT_CHILDREN']     ,  
+     
+    },ignore_index=True )
+
 
 
 

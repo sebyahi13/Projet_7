@@ -17,9 +17,18 @@ html_txt = """
     </div>
 
     <div style="background-color: white; padding:5px; border-radius:8px">
-        Construire un modèle de scoring qui donnera une prédiction sur la probabilité de faillite d'un client de façon automatique
+        Nous Construisons un modèle de scoring qui donnera une prédiction sur la probabilité de faillite d'un client de façon automatique.
 
     </div>
+
+    <div style="background-color: white; padding:5px; border-radius:8px">
+        Construire un dashboard interactif à destination des gestionnaires de la relation client permettant d'interpréter les prédictions faites par le modèle, et d’améliorer la 
+        connaissance client des chargés de relation client.
+
+    </div>
+
+
+
 
     """
 st.markdown(html_txt, unsafe_allow_html=True)

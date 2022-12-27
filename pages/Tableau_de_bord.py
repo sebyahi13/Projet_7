@@ -104,8 +104,8 @@ with col2:
 #st.write(X_client1)
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 X_client1 = X_client1.reset_index(drop=True)
-st.header('SCORE DU CLIENT')
-
+st.header('header')
+st.title('title')
 infos_client = pd.DataFrame({})
 #Sexe du client
 #CODE_GENDER

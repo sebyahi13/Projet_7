@@ -22,6 +22,7 @@ df_test_X=df_test_pkl.drop(columns=['SK_ID_CURR','TARGET'])
 id_clients=df_test_pkl.SK_ID_CURR.values
 
 
+st.header('Score du Client ')
 
 
 @st.cache(show_spinner=False, suppress_st_warning=True,allow_output_mutation=True) 

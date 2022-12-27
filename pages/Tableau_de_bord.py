@@ -111,13 +111,13 @@ st.write(   code_gender[ 0  ]     )
 
 infos_client = infos_client.append({
     'INFORMATION' : 'Sexe du client' ,
-    'VALEUR' :        0 ,# code_gender[  X_client1['CODE_GENDER']           ]  ,
-    'F1_score' :  2  ,  
-    'Precision_score' :  5 ,
-    'Recall_score' : 7,
+    'VALEUR' :        0 # code_gender[  X_client1['CODE_GENDER']           ]  ,
+      
+     
+     
     },ignore_index=True )
 
-st.write(infos_client)
+st.write(infos_client.T)
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

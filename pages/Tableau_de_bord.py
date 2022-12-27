@@ -284,7 +284,7 @@ infos_variables = infos_variables.append({
      
     },ignore_index=True )
 
-st.write(infos_variables.T)
+st.write(infos_variables)
 
 
 

@@ -211,7 +211,7 @@ infos_client1 = infos_client1.append({
 
 infos_client1 = infos_client1.append({
     'INFORMATION' : 'Situation (Familiale)' ,
-    'VALEUR' :       X_client1.loc[0, 'NAME_FAMILY_STATUS']     ,  
+    'VALEUR' :     "fdfdfd",#  X_client1.loc[0, 'NAME_FAMILY_STATUS']     ,  
      
     },ignore_index=True )
 

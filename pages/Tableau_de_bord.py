@@ -150,6 +150,16 @@ infos_client = infos_client.append({
 
 
 
+
+infos_client = infos_client.append({
+    'INFORMATION' : 'Revenu' ,
+    'VALEUR' :       X_client1.loc[0, 'AMT_INCOME_TOTAL']     ,  
+     
+    },ignore_index=True )
+
+
+
+
 st.write(infos_client.T)
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -22,8 +22,8 @@ df_test_X=df_test_pkl.drop(columns=['SK_ID_CURR','TARGET'])
 id_clients=df_test_pkl.SK_ID_CURR.values
 
 
-st.header('Score du Client ')
-st.markdown('**Score du Client :**.')
+#st.header('Score du Client ')
+st.markdown('**Score du Client :**')
 
 @st.cache(show_spinner=False, suppress_st_warning=True,allow_output_mutation=True) 
 def load_model():
@@ -105,7 +105,9 @@ with col2:
 #st.write(X_client1)
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 X_client1 = X_client1.reset_index(drop=True)
-st.header('Donnees Client')
+#st.header('Donnees Client')
+st.markdown('**Donnees Client :**')
+
 #st.title('title')
 infos_client = pd.DataFrame({})
 #Sexe du client
@@ -265,7 +267,8 @@ st.write(infos_client1.T)
 
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-st.header('Variables Importantes ')
+#st.header('Variables Importantes ')
+st.markdown('**Variables Importantes :**')
 
 infos_variables= pd.DataFrame({})
 

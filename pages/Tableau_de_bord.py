@@ -109,7 +109,7 @@ infos_client = pd.DataFrame({})
 code_gender={0:'FEMME',1:'HOMME'     }
 st.write(   code_gender[ 0  ]     )
 #X_client1['CODE_GENDER'].values
-st.write(   X_client1['CODE_GENDER'].loc[0]    )
+st.write(    X_client1.loc[0, 'CODE_GENDER']      )
 infos_client = infos_client.append({
     'INFORMATION' : 'Sexe du client' ,
     'VALEUR' :        0 # code_gender[  X_client1['CODE_GENDER']           ]  ,

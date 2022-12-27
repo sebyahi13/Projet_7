@@ -161,6 +161,52 @@ infos_client = infos_client.append({
 
 
 st.write(infos_client.T)
+
+
+
+infos_client1 = pd.DataFrame({})
+
+
+
+infos_client1 = infos_client1.append({
+    'INFORMATION' : 'Montant (Credit)' ,
+    'VALEUR' :       X_client1.loc[0, 'AMT_CREDIT']     ,  
+     
+    },ignore_index=True )
+
+
+
+infos_client1 = infos_client1.append({
+    'INFORMATION' : 'Annuité (Pret)' ,
+    'VALEUR' :       X_client1.loc[0, 'AMT_ANNUITY']     ,  
+     
+    },ignore_index=True )
+
+
+
+infos_client1 = infos_client1.append({
+    'INFORMATION' : 'Niveau (Etudes)' ,
+    'VALEUR' :       X_client1.loc[0, 'NAME_EDUCATION_TYPE']     ,  
+     
+    },ignore_index=True )
+
+
+
+infos_client1 = infos_client1.append({
+    'INFORMATION' : 'Situation (Familiale)' ,
+    'VALEUR' :       X_client1.loc[0, 'NAME_FAMILY_STATUS']     ,  
+     
+    },ignore_index=True )
+
+
+
+
+st.write(infos_client1.T)
+
+
+
+
+
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

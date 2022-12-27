@@ -182,11 +182,28 @@ infos_client1 = infos_client1.append({
      
     },ignore_index=True )
 
+#NAME_EDUCATION_TYPE_Academic degree
+#NAME_EDUCATION_TYPE_Secondary / secondary special
+#NAME_EDUCATION_TYPE_Higher education
+#NAME_EDUCATION_TYPE_Incomplete higher
+#NAME_EDUCATION_TYPE_Lower secondary
+name_education_type="NO INFOS"
+if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Lower secondary'] ==1  ):
+    name_education_type="Lower secondary"
+
+if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Lower secondary'] ==1  ):
+    name_education_type="Lower secondary"
+
+if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Lower secondary'] ==1  ):
+    name_education_type="Lower secondary"
+
+
+
 
 
 infos_client1 = infos_client1.append({
     'INFORMATION' : 'Niveau (Etudes)' ,
-    'VALEUR' :       X_client1.loc[0, 'NAME_EDUCATION_TYPE']     ,  
+    'VALEUR' :       name_education_type    ,  
      
     },ignore_index=True )
 

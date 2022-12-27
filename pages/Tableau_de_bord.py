@@ -45,12 +45,12 @@ else:
 
 X_client=df_test_pkl[df_test_pkl['SK_ID_CURR']==id_client]
 st.write(X_client)
-X_client.drop(columns=['SK_ID_CURR','TARGET'],inplace=True)
-st.write(X_client)
+X_client1=X_client.drop(columns=['SK_ID_CURR','TARGET'])
+st.write(X_client1)
 
-X_client1=X_client.values
+X_client2=X_client1.values
 
-y_pred_proba_model= model_ok.predict_proba(X_client1 )
+y_pred_proba_model= model_ok.predict_proba(X_client2 )
 st.write(y_pred_proba_model[0][0])
 score=y_pred_proba_model[0][0]
 #st.empty()

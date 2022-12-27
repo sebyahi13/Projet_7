@@ -52,7 +52,7 @@ X_client1=X_client.drop(columns=['SK_ID_CURR','TARGET'])
 X_client2=X_client1.values
 
 y_pred_proba_model= model_ok.predict_proba(X_client2 )
-st.write(y_pred_proba_model[0][0])
+#st.write(y_pred_proba_model[0][0])
 score=y_pred_proba_model[0][0]
 #st.empty()
 col1,col2=st.columns(2)
@@ -116,7 +116,7 @@ infos_client = pd.DataFrame({})
 code_gender={0:'FEMME',1:'HOMME'     }
 #st.write(   code_gender[ 0  ]     )
 #X_client1['CODE_GENDER'].values
-st.write(    X_client1.loc[0, 'CODE_GENDER']      )
+#st.write(    X_client1.loc[0, 'CODE_GENDER']      )
 infos_client = infos_client.append({
     'INFORMATION' : 'Sexe du client' ,
     'VALEUR' :    code_gender[   X_client1.loc[0, 'CODE_GENDER']    ]  ,  

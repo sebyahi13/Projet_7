@@ -44,7 +44,7 @@ else:
     st.empty()
 
 X_client=df_test_pkl[df_test_pkl['SK_ID_CURR']==id_client]
-st.write(X_client)
+
 X_client1=X_client.drop(columns=['SK_ID_CURR','TARGET'])
 st.write(X_client1)
 
@@ -99,22 +99,13 @@ with col2:
 
 
 
-
-
-
-
-
-
-
-
-
+st.write(X_client)
+st.write(X_client1)
 
 
 
 #st.columns.
 #go.Indicator()
-
-
 
 
 

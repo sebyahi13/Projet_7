@@ -244,11 +244,11 @@ infos_client1 = infos_client1.append({
      
     },ignore_index=True )
 
-
-
+age=  ( (-1) * X_client1.loc[0, 'DAYS_BIRTH'] ) / 365
+age=  round(age ,1 ) 
 infos_client1 = infos_client1.append({
     'INFORMATION' : 'Age' ,
-    'VALEUR' :      (-1) * X_client1.loc[0, 'DAYS_BIRTH'] /365    ,  
+    'VALEUR' :  age  ,  
      
     },ignore_index=True )
 

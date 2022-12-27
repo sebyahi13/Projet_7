@@ -120,8 +120,8 @@ with col2:
 
 fig1, ax1 = plt.subplots(figsize=(10, 10))
 #explainer = shap.TreeExplainer(model)
-shap_values1 = explainer_ok.shap_values( X_client )
-shap.summary_plot(shap_values1, features= X_client  , plot_type ="bar", max_display=10, color_bar=False, plot_size=(10, 10))            
+shap_values1 = explainer_ok.shap_values( X_client1 )
+shap.summary_plot(shap_values1, features= X_client1  , plot_type ="bar", max_display=10, color_bar=False, plot_size=(10, 10))            
 st.pyplot(fig1)  
 
 
@@ -134,7 +134,7 @@ st.pyplot(fig1)
 
 fig3 ,ax_3= plt.subplots(figsize=(6,6))
 ax_3= shap.plots._waterfall.waterfall_legacy(explainer_ok.expected_value[1],shap_values1[1][0], 
-                                             feature_names = X_client.columns,max_display = 20)
+                                             feature_names = X_client1.columns,max_display = 20)
 st.pyplot(fig3)
 
 

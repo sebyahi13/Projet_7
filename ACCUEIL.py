@@ -22,7 +22,7 @@ html_txt = """
     </div>
 
     <div style="background-color: white; padding:5px; border-radius:8px">
-        A destination des gestionnaires de la relation client, Notre Tableau de bord  permet d'interpréter les prédictions faites par le modèle, et d’améliorer la 
+        A destination des gestionnaires de la relation client, Notre <b>Tableau de bord</b>  permet d'interpréter les prédictions faites par le modèle, et d’améliorer la 
         connaissance client des chargés de relation client.
 
     </div>

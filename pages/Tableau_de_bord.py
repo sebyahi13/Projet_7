@@ -191,13 +191,17 @@ name_education_type="NO INFOS"
 if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Lower secondary'] ==1  ):
     name_education_type="Lower secondary"
 
-if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Lower secondary'] ==1  ):
-    name_education_type="Lower secondary"
+if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Academic degree'] ==1  ):
+    name_education_type="Academic degree"
 
-if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Lower secondary'] ==1  ):
-    name_education_type="Lower secondary"
+if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Secondary / secondary special'] ==1  ):
+    name_education_type="Secondary / secondary special"
 
+if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Incomplete higher'] ==1  ):
+    name_education_type="Incomplete higher"
 
+if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Higher education'] ==1  ):
+    name_education_type="Higher education"
 
 
 

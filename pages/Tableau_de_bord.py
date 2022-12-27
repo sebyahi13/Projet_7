@@ -246,6 +246,14 @@ infos_client1 = infos_client1.append({
 
 
 
+infos_client1 = infos_client1.append({
+    'INFORMATION' : 'Age' ,
+    'VALEUR' :      (-1) * X_client1.loc[0, 'DAYS_BIRTH'] /365    ,  
+     
+    },ignore_index=True )
+
+
+
 
 st.write(infos_client1.T)
 

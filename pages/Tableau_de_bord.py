@@ -23,7 +23,7 @@ id_clients=df_test_pkl.SK_ID_CURR.values
 
 
 st.header('Score du Client ')
-
+st.markdown('**Score du Client :**.')
 
 @st.cache(show_spinner=False, suppress_st_warning=True,allow_output_mutation=True) 
 def load_model():

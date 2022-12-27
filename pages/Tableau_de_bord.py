@@ -46,7 +46,7 @@ else:
 X_client=df_test_pkl[df_test_pkl['SK_ID_CURR']==id_client]
 
 X_client1=X_client.drop(columns=['SK_ID_CURR','TARGET'])
-st.write(X_client1)
+#st.write(X_client1)
 
 X_client2=X_client1.values
 

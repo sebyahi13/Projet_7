@@ -4,7 +4,7 @@ import  pandas as pd
 
 import time
 import joblib
-import shap
+#import shap
 import plotly.graph_objects as go
 
 
@@ -27,12 +27,12 @@ id_clients=df_test_pkl.SK_ID_CURR.values
 @st.cache(show_spinner=False, suppress_st_warning=True,allow_output_mutation=True) 
 def load_model():
     model = joblib.load('best_model_ok.pkl') 
-    explainer = shap.TreeExplainer(model)  
+    #explainer = shap.TreeExplainer(model)  
     #shap_values =explainer.shap_values(X)
-    return model,explainer
+    return model    #,explainer
 
-model_ok,explainer_ok= load_model()
-
+model_ok= load_model()
+#model_ok,explainer_ok= load_model()
 
 #st.write(df_test_pkl)
 id_client = st.sidebar.selectbox('Choisir un Identifiant client: ', id_clients)
@@ -118,11 +118,11 @@ with col2:
 
 
 
-fig1, ax1 = plt.subplots(figsize=(10, 10))
+#fig1, ax1 = plt.subplots(figsize=(10, 10))
 #explainer = shap.TreeExplainer(model)
-shap_values1 = explainer_ok.shap_values( X_client )
-shap.summary_plot(shap_values1, features= X_client  , plot_type ="bar", max_display=10, color_bar=False, plot_size=(10, 10))            
-st.pyplot(fig1)  
+#shap_values1 = explainer_ok.shap_values( X_client )
+#shap.summary_plot(shap_values1, features= X_client  , plot_type ="bar", max_display=10, color_bar=False, plot_size=(10, 10))            
+#st.pyplot(fig1)  
 
 
 
@@ -132,10 +132,10 @@ st.pyplot(fig1)
 #shap.summary_plot(shap_values1, X_client, feature_names=X_client.columns, show=False, plot_size=None)
 #st.pyplot(fig2)  
 
-fig3 ,ax_3= plt.subplots(figsize=(6,6))
-ax_3= shap.plots._waterfall.waterfall_legacy(explainer_ok.expected_value[1],shap_values1[1][0], 
+#fig3 ,ax_3= plt.subplots(figsize=(6,6))
+#ax_3= shap.plots._waterfall.waterfall_legacy(explainer_ok.expected_value[1],shap_values1[1][0], 
                                              feature_names = X_client.columns,max_display = 20)
-st.pyplot(fig3)
+#st.pyplot(fig3)
 
 
 

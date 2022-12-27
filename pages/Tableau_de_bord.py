@@ -101,17 +101,24 @@ with col2:
 
 st.write(X_client)
 st.write(X_client1)
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 infos_client = pd.DataFrame({})
+#Sexe du client
+#CODE_GENDER
+
+code_gender={0:'FEMME',1:'HOMME'     }
+
+
 infos_client = infos_client.append({
-    'Model' : 2,
-    'Score AUC' : 1  ,
+    'INFORMATION' : 'Sexe du client' ,
+    'VALEUR' : code_gender[  X_client1['CODE_GENDER']           ]  ,
     'F1_score' :  2  ,  
     'Precision_score' :  5 ,
     'Recall_score' : 7,
     },ignore_index=True )
 
 st.write(infos_client)
-
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

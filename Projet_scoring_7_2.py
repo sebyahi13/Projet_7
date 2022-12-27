@@ -134,7 +134,7 @@ with col2:
 
 #fig3 ,ax_3= plt.subplots(figsize=(6,6))
 #ax_3= shap.plots._waterfall.waterfall_legacy(explainer_ok.expected_value[1],shap_values1[1][0], 
-                                             feature_names = X_client.columns,max_display = 20)
+#                                             feature_names = X_client.columns,max_display = 20)
 #st.pyplot(fig3)
 
 

@@ -59,7 +59,7 @@ col1,col2=st.columns(2)
 with col1:
     st.markdown('<span  style=\"margin:8px;background:green;\"  >', unsafe_allow_html=True  )
 
-    if (score > 0.9):
+    if (score > 0.5):
         st.image('OK.jpg',caption='Decision',width=200)
     else:
         st.image('NOK.png',caption='Decision',width=200)
@@ -73,11 +73,11 @@ with col2:
         value = score * 100,
         mode = "number+gauge",
         title = {'text': "Score du Client : (0-100)"},
-        delta = {'reference': 0.3},
+        delta = {'reference': 0.5},
         gauge = {'axis': {'range': [0, 100]},
              'steps' : [
-                 {'range': [0, 30], 'color': "red"},
-                 {'range': [30, 100], 'color': "MediumSpringGreen"}],
+                 {'range': [0, 50], 'color': "red"},
+                 {'range': [50, 100], 'color': "MediumSpringGreen"}],
              'threshold' : {'line': {'color': "red", 'width': 5}, 'thickness': 0.80, 'value': round(score * 100,4)     }}))
 
 

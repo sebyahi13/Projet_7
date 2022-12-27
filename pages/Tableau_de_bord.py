@@ -187,7 +187,7 @@ infos_client1 = infos_client1.append({
 #NAME_EDUCATION_TYPE_Higher education
 #NAME_EDUCATION_TYPE_Incomplete higher
 #NAME_EDUCATION_TYPE_Lower secondary
-name_education_type="NO INFOS"
+name_education_type="Unknown"
 if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Lower secondary'] ==1  ):
     name_education_type="Lower secondary"
 
@@ -205,6 +205,7 @@ if (  X_client1.loc[0, 'NAME_EDUCATION_TYPE_Higher education'] ==1  ):
 
 
 
+
 infos_client1 = infos_client1.append({
     'INFORMATION' : 'Niveau (Etudes)' ,
     'VALEUR' :       name_education_type    ,  
@@ -212,10 +213,34 @@ infos_client1 = infos_client1.append({
     },ignore_index=True )
 
 
+# NAME_FAMILY_STATUS_Single / not married
+# NAME_FAMILY_STATUS_Married
+# NAME_FAMILY_STATUS_Civil marriage
+# NAME_FAMILY_STATUS_Widow
+# NAME_FAMILY_STATUS_Separated
+
+
+
+name_family_status="Unknown"
+if (  X_client1.loc[0, 'NAME_FAMILY_STATUS_Single / not married'] ==1  ):
+    name_family_status="Single / not married"
+
+if (  X_client1.loc[0, 'NAME_FAMILY_STATUS_Married'] ==1  ):
+    name_family_status="Married"
+
+if (  X_client1.loc[0, 'NAME_FAMILY_STATUS_Civil marriage'] ==1  ):
+    name_family_status="Civil marriage"
+
+if (  X_client1.loc[0, 'NAME_FAMILY_STATUS_Widow'] ==1  ):
+    name_family_status="Widow"
+
+if (  X_client1.loc[0, 'NAME_FAMILY_STATUS_Separated'] ==1  ):
+    name_family_status="Separated"
+
 
 infos_client1 = infos_client1.append({
     'INFORMATION' : 'Situation (Familiale)' ,
-    'VALEUR' :     "fdfdfd",#  X_client1.loc[0, 'NAME_FAMILY_STATUS']     ,  
+    'VALEUR' :    name_family_status    ,  
      
     },ignore_index=True )
 

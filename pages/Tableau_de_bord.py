@@ -247,7 +247,7 @@ infos_client1 = infos_client1.append({
 age=  ( (-1) * X_client1.loc[0, 'DAYS_BIRTH'] ) / 365
 age=  round(age ,1 ) 
 infos_client1 = infos_client1.append({
-    'INFORMATION' : 'Age' ,
+    'INFORMATION' : 'Age du client' ,
     'VALEUR' :  age  ,  
      
     },ignore_index=True )
@@ -263,7 +263,37 @@ st.write(infos_client1.T)
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+infos_variables= pd.DataFrame({})
 
+
+infos_variables = infos_variables.append({
+    'VARIABLE' : 'EXT_SOURCE_1' ,
+    'DEFINITION' :  'Score normalisé de la source (1) de données externe'  ,  
+     
+    },ignore_index=True )
+
+infos_variables = infos_variables.append({
+    'VARIABLE' : 'EXT_SOURCE_2' ,
+    'DEFINITION' :  'Score normalisé de la source (2) de données externe'  ,  
+     
+    },ignore_index=True )
+
+infos_variables = infos_variables.append({
+    'VARIABLE' : 'EXT_SOURCE_3' ,
+    'DEFINITION' :  'Score normalisé de la source (3) de données externe'  ,  
+     
+    },ignore_index=True )
+
+st.write(infos_variables.T)
+
+
+
+
+
+
+
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #st.columns.
 #go.Indicator()

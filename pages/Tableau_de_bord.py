@@ -114,11 +114,25 @@ code_gender={0:'FEMME',1:'HOMME'     }
 st.write(    X_client1.loc[0, 'CODE_GENDER']      )
 infos_client = infos_client.append({
     'INFORMATION' : 'Sexe du client' ,
-    'VALEUR' :    code_gender[   X_client1.loc[322578, 'CODE_GENDER']            ]  ,
-      
-     
+    'VALEUR' :    code_gender[   X_client1.loc[0, 'CODE_GENDER']    ]  ,  
      
     },ignore_index=True )
+
+
+
+
+flag_own_car={0:'NON',1:'OUI'     }
+infos_client = infos_client.append({
+    'INFORMATION' : 'Possession (Voiture)' ,
+    'VALEUR' :    flag_own_car[   X_client1.loc[0, 'FLAG_OWN_CAR']    ]  ,  
+     
+    },ignore_index=True )
+
+
+
+
+
+
 
 st.write(infos_client.T)
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

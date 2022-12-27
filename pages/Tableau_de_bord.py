@@ -56,6 +56,8 @@ score=y_pred_proba_model[0][0]
 #st.empty()
 col1,col2=st.columns(2)
 
+st.header('SCORE DU CLIENT')
+
 with col1:
     st.markdown('<span  style=\"margin:8px;background:green;\"  >', unsafe_allow_html=True  )
 
@@ -99,8 +101,8 @@ with col2:
 
 
 
-st.write(X_client)
-st.write(X_client1)
+#st.write(X_client)
+#st.write(X_client1)
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 X_client1 = X_client1.reset_index(drop=True)
 

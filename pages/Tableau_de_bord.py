@@ -101,6 +101,17 @@ with col2:
 
 st.write(X_client)
 st.write(X_client1)
+infos_client = pd.DataFrame({})
+infos_client = infos_client.append({
+    'Model' : 2,
+    'Score AUC' : 1  ,
+    'F1_score' :  2  ,  
+    'Precision_score' :  5 ,
+    'Recall_score' : 7,
+    },ignore_index=True )
+
+st.write(infos_client)
+
 
 
 
